@@ -1,2 +1,124 @@
-.landing-page-image {
+body {
+		display:block;
+		margin:0px;
 }
+
+/* Scrolling without scrollbar. See:
+https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll
+*/
+
+body {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+body::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+/* end scrolling without scrollbar */
+
+.header {
+		background: linear-gradient(181deg, #7be3ff, #232bf7);
+		position:fixed;
+		top:0;
+		width:100%;
+}
+nav ul {
+		display:flex;
+		padding: 0px 20px;
+		list-style:none;
+}
+
+nav li a {
+		padding: 0px 10px;
+}
+
+nav a {
+		font-size:18px;
+		color:white;
+		text-decoration:none;
+}
+
+@media only screen and (max-width: 300px) {
+		nav li a {
+				padding: 0px 5px;
+		}
+
+		nav a {
+				font-size:16px;
+				color:white;
+				text-decoration:none;
+		}	
+}
+
+nav li:last-child {
+		margin-left:auto;
+}
+
+.cover {
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		background: linear-gradient(181deg, #2192b1, #2bbaff);
+		height:50vh;
+}
+.grid {
+		background: linear-gradient(181deg, #5fcfff, #52b398);
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(auto-fill,minmax(100px,200px));
+		justify-items: center;
+		align-items: center;
+		overflow-y: auto;
+		align-content: start;
+		justify-content: center;
+		padding-top: 20px;
+		padding-bottom: 6vh;
+}
+
+.item {
+		background-color: #7be3ff;
+    padding: 20px;
+}
+
+
+.item img {
+		width: 100%;
+    /* object-fit: cover; */
+    border-style: solid;
+    border-color: #b7f0ff;
+    border-width: 2px;
+}
+
+.footer {
+		background: linear-gradient(180deg, #ff5219, #ffbb3e);
+		color: white;
+		position:fixed;
+		bottom:0;
+		width:100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 4vh;
+}
+
+/*
+
+Could also try:
+
+.item-content {
+		background-color: green;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.item-content img {
+		flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+*/
+
